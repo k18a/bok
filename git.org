@@ -19,10 +19,26 @@
 
 - commit changes to repository with
   - git commit
+- to commit all modified files already tracked in repository
+  - git commit -a
+  - not adding any new files
 - get history of commits with
   - git log
+- exclude files by putting them in .gitignore
+- remove files from the disk and the repository with
+  - git rm
+- remove files from only the repository
+  - git rm --cached
+
+* Remove/Revert/Reset
+
 - to download the latest version from the repository
   - git checkout
-- exclude files by putting them in .gitignore
+- revert to a specific commit
+  - git revert
+  - keeps commit history
+- to permanantly trash your changes and get back to a previous commit for all files
+  - git reset
+  - does not keep commit history
 
-* 
+* Branch
