@@ -37,6 +37,8 @@
 - revert to a specific commit
   - git revert
   - keeps commit history
+- revert back n commits
+  - git revert HEAD~n
 - to permanantly trash your changes and get back to a previous commit for all files
   - git reset
   - does not keep commit history
