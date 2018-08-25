@@ -1,0 +1,5 @@
+#exclude emacs backup files
+*~
+
+#ignore html files
+*.html
