@@ -42,5 +42,10 @@
 - to permanantly trash your changes and get back to a previous commit for all files
   - git reset
   - does not keep commit history
+ 
+* Cloning
+
+- to clone remote repositories
+  - git clone
 
 * Branch
