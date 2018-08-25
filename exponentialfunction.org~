@@ -1,7 +1,0 @@
-#+TITLE: Exponential Function
-
-- e is the limit of 1 plus a small number, raised to the power of the reciprocal of the small number, as that small number approaches 0 
-- defined by the limit: $e=\lim_{n \to \infty} (1 + \frac{1}{n})^n$
-- in terms of h = 1/n: $e=\lim_{h \to 0} (1 + h)^(1/h)$
-- its importance in calculus lies in the fact that the exponential function $y=e^x$ is unchanged by differentiation: $\frac{d(e^x)}{dx}=e^x$, or $\frac{dy}{dx}=y$
-

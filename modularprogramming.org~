@@ -1,5 +1,0 @@
-#+TITLE: Modular Programming
-
-- emphasizes separating the functionality of a programme into independent, interchangeable modules
-- each module contains everything necessary to execute only one aspect of the desired functionality
-- 
