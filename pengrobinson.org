@@ -1,0 +1,25 @@
+#+TITLE: Peng-Robinson Equation of State
+
+* Peng-Robinson Equation of State
+
+$P = \frac{RT}{V_m - b} - \frac{a \alpha}{V _m ^2 + 2 v V_m - b ^2}$
+
+Equation constants are defined as,
+
+$a = \frac{0.457235 R^2 T _c ^2}{P_c}$
+
+$b = \frac{0.077796 R T_c}{P_c}$
+
+$\alpha = (1 + \kappa (1 - T _r ^{1/2}) )^2$ 
+
+$\kappa= 0.37464 + 1.54223 \omega - 0.23992 \omega ^2$
+
+$\omega$ is the acentric factor given by,
+
+$\omega = \frac{P _{sat}}{P_c}$
+
+- P is pressure
+- R is gas constant
+- Vm is molar volume
+- Psat is saturated vapour pressure
+- Pc is critical pressure

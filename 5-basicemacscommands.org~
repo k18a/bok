@@ -1,0 +1,17 @@
+* Basic Emacs Commands
+** Help 
+*** get help C-h 
+*** get help for a single command - C-h c command
+*** display documentation for a single command C-h k command
+*** get help for a function - C-h f
+*** get help for a variable - C-h v
+*** list all commands with keyword - C-h a
+*** view documentation of current major mode C-h m
+*** to get pop up tool bar - C-right_click
+
+* Combinations with other commands
+*** repeat commands - C-u n command; C-v, M-v are exceptions - screen scrolls by n lines instead of 1 screen
+*** stop emacs - C-g - stops all commands
+*** disabled commands - press <SPC> to execute when prompted
+*** undo - C-x u or C_
+*** all-purpose get out - <esc><esc><esc>

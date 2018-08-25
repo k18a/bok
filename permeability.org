@@ -1,0 +1,4 @@
+#+TITLE: Permeability
+
+- the use of CO2 based fracturing fluids can minimise reduction in formation permeability due to water imbibition cite:Lu2016
+- permeability of shales can increase when treated with CO2-saturated brine solution at hydraulic fracturing conditions due to the decomposition of carbonate minerals cite:Lu2016

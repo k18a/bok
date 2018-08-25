@@ -1,0 +1,4 @@
+#+TITLE: Product Rule
+
+
+$d(TS) = TdS + SdT$

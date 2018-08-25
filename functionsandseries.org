@@ -1,0 +1,8 @@
+#+TITLE: Functions and Series
+
+- [[file:homogeneousfunction.org][Homogeneous Function]]
+- [[file:exponentialfunction.org][Exponential Function]]
+- [[file:gammafunction.org][Gamma Function]]
+
+- [[file:taylorseries.org][Taylor/Maclaurin Series]]
+- 

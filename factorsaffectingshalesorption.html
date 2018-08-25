@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-06-12 Tue 20:55 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Factors Affecting Adsorption in Shales</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Factors Affecting Adsorption in Shales</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgdb8a3e4">1. Clay Mineral Content</a></li>
+<li><a href="#org7088aec">2. Moisture</a></li>
+<li><a href="#orgfcfc6fd">3. Oxidation</a></li>
+<li><a href="#orga43be6a">4. Pore Structure</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdb8a3e4" class="outline-2">
+<h2 id="orgdb8a3e4"><span class="section-number-2">1</span> Clay Mineral Content</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>whilst mineral content did not directly affect sorption characteristics, they are closely correlated with the coal's pore structure, which has a major influence on sorption and kinetics <a class='org-ref-reference' href="#Crosdale1998">Crosdale1998</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7088aec" class="outline-2">
+<h2 id="org7088aec"><span class="section-number-2">2</span> Moisture</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li><a class='org-ref-reference' href="#Gasparik2014">Gasparik2014</a> demonstrated that moisture content can have a significant impact on adsorption kinetics but did not investigate further</li>
+<li>Moisture significantly alters multicomponent adsorption equilibria <a class='org-ref-reference' href="#Clarkson2000">Clarkson2000</a></li>
+<li>Moisture decreases CO2 selectivity in coals, although relative experimental errors for this study was over 10% - we must be cautions in drawing inferences from these results <a class='org-ref-reference' href="#Clarkson2000">Clarkson2000</a></li>
+<li>Moisture equilibrated coals took longer to reach equilibrium <a class='org-ref-reference' href="#Clarkson1999">Clarkson1999</a></li>
+<li>Methane adsorption capacity of moisture equilibrated coals was about 40% lower than dry shales <a class='org-ref-reference' href="#Ross2007">Ross2007</a></li>
+<li>CO2 adsorption capacity of moisture equilibrated coals at 50% RH was reduced by about 30% <a class='org-ref-reference' href="#Mazzotti2009">Mazzotti2009</a></li>
+<li>Equilibrium moisture content was strongly correlated with the alumino-silicate fraction of shales <a class='org-ref-reference' href="#Ross2007">Ross2007</a></li>
+<li>Varying levels of moisture desorption is believed to be one of the key challenges in achieving inter-laboratory reproducibility <a class='org-ref-reference' href="#Mazzotti2009">Mazzotti2009</a></li>
+<li>Standard procedures for measuring adsorption in shales in the presence of water are not well established. Adsorption is typically measured using manometric or gravimetric methods on samples equilibrated to various levels of relative humidity, assuming that water is not desorbed whilst carrying out methane sorption studies. However, it is possible that moisture is desorbed with increasing methane partial pressures, leading to a quasi-critical moisture content that is not applicable at reservoir conditions.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgfcfc6fd" class="outline-2">
+<h2 id="orgfcfc6fd"><span class="section-number-2">3</span> Oxidation</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>long storage times or high temperature may lead to oxidation of shale components leading to decreased sorption capacities by as much as 11% <a class='org-ref-reference' href="#Krooss2002">Krooss2002</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga43be6a" class="outline-2">
+<h2 id="orga43be6a"><span class="section-number-2">4</span> Pore Structure</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>the porous structure of the adsorbate is one of the most important factors that determine the nature of adsorption phenomena in porous solids <a class='org-ref-reference' href="#Bering1966">Bering1966</a></li>
+<li>application of theories derived for a smooth surface of a non-porous crystal has no theoretical basis and is purely empirical in nature <a class='org-ref-reference' href="#Bering1966">Bering1966</a></li>
+<li>It's generally recognized that micropore volume is a significant contributor to a shale's Specific Surface Area (SSA), which in turn is a key control on amount adsorbed <a class='org-ref-reference' href="#Wang2016">Wang2016</a></li>
+<li>mesopore volume has not been shown to influence adsorption to the same degree as micropore volume <a class='org-ref-reference' href="#Crosdale1998">Crosdale1998</a></li>
+<li>In microporous substances such as shales, micropore volume is expected to have a greater control on the adsorption capacity of the substance than the surface area <a class='org-ref-reference' href="#Clarkson1999">Clarkson1999</a></li>
+<li>The mean pore throat sizes in shales range between 5nm and 100 nm, whilst for conventional reservoirs mean pore sizes are generally greater than 2 \(/mum\) <a class='org-ref-reference' href="#Nelson2009">Nelson2009</a>
+<ul class="org-ul">
+<li>For comparison the diameter of a methane molecule is about .414 nm,</li>
+<li>that of a carbon dioxide molecule is about .232 nm, and</li>
+<li>that of a water molecule is about .275 nm.</li>
+</ul></li>
+</ul>
+
+
+<div id="org1fa3d8b" class="figure">
+<p><img src="./Nelson200901.jpg" alt="Nelson200901.jpg" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Pore Size Distribution from Nelson 2009</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2018-06-12 Tue 20:55</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

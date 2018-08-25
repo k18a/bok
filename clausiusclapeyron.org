@@ -1,0 +1,8 @@
+#+TITLE: Clausius Clapeyron Equation
+
+* Clausius-Clapeyron Equation
+
+- a way of characterizing discontinuous phase transition in a single component system
+- gives the slope of the tangents to the PT diagram
+
+$\frac{dP}{dT} = \frac{L}{t \Delta v} = \frac{\Delta s}{\Delta v}$

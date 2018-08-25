@@ -1,0 +1,11 @@
+#+TITLE: Unipore Diffusion Model
+
+- $\frac{V_t}{V_\infty} = 1 - \frac{6}{\pi^2} \Sigma (\frac{1}{n^2}) exp(-\frac{D n^2 \pi t}{r_p^2})$
+  - where 
+  - $V_t$ is amount adsorbed at time t
+  - $V_\infty$ is amount adsorbed at time $\infty$
+- when $V_t/V_\infty <0.5$ (for short time scales < 600 s) the unipore model can be simplified as cite:Crosdale1998
+  - $\frac{V}{V_t}=\frac{6}{\sqrt{\pi}}{\sqrt{D_e t}}$
+- the unipore model, assumes a linear adsorption isotherm and an unimodal pore size distribution cite:Clarkson1999, and hence cannot be used with heterogeneous pore structures.
+- the unipore model tends to underestimate the time taken to reach equilibrium cite:Clarkson1999
+- cite:Crosdale1998 found that in the vitrinite rich coals that were predominantly microporous, unipore model was applicable, whilst diffusion in the inertinite rich coals were better explained by the bidisperse model. 

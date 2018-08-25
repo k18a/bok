@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-06-28 Thu 18:35 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Adsorption and Migration Mechanisms in Gas Shales at Pore Scale</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Adsorption and Migration Mechanisms in Gas Shales at Pore Scale</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org3ac7324">1. Adsorption</a>
+<ul>
+<li><a href="#org9855ee0">1.1. Theory</a>
+<ul>
+<li><a href="#orga89a400">1.1.1. Single-Component Models</a></li>
+<li><a href="#orge6c04f0">1.1.2. Multi-Component Models</a></li>
+<li><a href="#org041d789">1.1.3. Other Concepts</a></li>
+<li><a href="#org53c41a6">1.1.4. Adsorption Characterization Methods</a></li>
+<li><a href="#org036b753">1.1.5. Factors Affecting Sorption in Shales</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgccb24f0">2. Diffusion</a>
+<ul>
+<li>
+<ul>
+<li><a href="#orgd0ba247">2.0.1. Rate Law Based Equations</a></li>
+</ul>
+</li>
+<li><a href="#org5c7d49d">2.1. Fick's Laws</a>
+<ul>
+<li><a href="#org7687b3d">2.1.1. Film Diffusion Models</a></li>
+<li><a href="#org1f5fb7d">2.1.2. Surface Diffusion Models</a></li>
+</ul>
+</li>
+<li><a href="#orgf0f8553">2.2. Experiment / Calculations</a></li>
+</ul>
+</li>
+<li><a href="#org6ee806b">3. Pore/Surface Characterization</a>
+<ul>
+<li><a href="#orgf80f84b">3.1. Pore/Surface Characterization Methods</a></li>
+</ul>
+</li>
+<li><a href="#org46fa2f3">4. Geology</a></li>
+<li><a href="#org4a345d5">5. Enhanced Recovery</a></li>
+<li><a href="#org477cce0">6. Papers</a></li>
+<li><a href="#org08c3852">7. Bibliography</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3ac7324" class="outline-2">
+<h2 id="org3ac7324"><span class="section-number-2">1</span> Adsorption</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org9855ee0" class="outline-3">
+<h3 id="org9855ee0"><span class="section-number-3">1.1</span> Theory</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-orga89a400" class="outline-4">
+<h4 id="orga89a400"><span class="section-number-4">1.1.1</span> Single-Component Models</h4>
+<div class="outline-text-4" id="text-1-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgc7de728"></a><a href="gibbsapproachadsorption.html">Gibbs Thermodynamic Approach</a><br />
+<div class="outline-text-5" id="text-1-1-1-1">
+<ul class="org-ul">
+<li><a href="linearisotherm.html">Linear Isotherm</a></li>
+<li><a href="volmerisotherm.html">Volmer Isotherm</a></li>
+<li><a href="fowlerguggenheim.html">Fowler-Guggenheim Isotherm</a></li>
+<li><a href="hilldeboer.html">Hill-deBoer Isotherm</a></li>
+</ul>
+</div>
+</li>
+
+
+<li><a id="orgf7b8d9f"></a>Mono-layer Models<br />
+<div class="outline-text-5" id="text-1-1-1-2">
+<ul class="org-ul">
+<li><a href="langmuir.html">Langmuir Isotherm</a></li>
+<li><a href="freundlich.html">Freundlich Isotherm</a></li>
+<li><a href="sips.html">Sips Isotherm</a></li>
+<li><a href="toth.html">Toth Isotherm</a></li>
+<li><a href="unilan.html">UNILAN Isotherm</a></li>
+</ul>
+</div>
+</li>
+
+<li><a id="org806c38e"></a><a href="multilayering.html">Multi-layer Models</a><br /></li>
+
+<li><a id="orgc45a7b9"></a><a href="microporefilling.html">Micropore-filling Models</a><br /></li>
+</ol>
+</div>
+
+
+<div id="outline-container-orge6c04f0" class="outline-4">
+<h4 id="orge6c04f0"><span class="section-number-4">1.1.2</span> Multi-Component Models</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<ul class="org-ul">
+<li><a href="harkinsjuraisotherm.html">Harkins-Jura Isotherm</a></li>
+<li><a href="extendedlangmuir.html">Extended Langmuir Isotherm</a></li>
+<li><a href="idealadsorptionsolutiontheory.html">Ideal Adsorption Solution Theory</a></li>
+<li><a href="loadingratiocorrelation.html">Loading Ratio Correlation</a></li>
+<li><a href="zgreos.html">ZGR Equation of State</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org041d789" class="outline-4">
+<h4 id="org041d789"><span class="section-number-4">1.1.3</span> Other Concepts</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<ul class="org-ul">
+<li><a href="adsorptionhysteresis.html">Hysteresis</a></li>
+<li><a href="isostericheat.html">Isosteric Heat of Adsorption</a></li>
+<li><a href="capillarycondensation.html">Capillary Condensation</a></li>
+<li><a href="criticaldesorptionpressure.html">Critical Desorption Pressure</a></li>
+<li><a href="separationfactoradsorption.html">Separation Factor</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org53c41a6" class="outline-4">
+<h4 id="org53c41a6"><span class="section-number-4">1.1.4</span> Adsorption Characterization Methods</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<ul class="org-ul">
+<li><a href="manometricmeasurement.html">Manometric</a></li>
+<li><a href="continuousmeasurement.html">Continuous</a></li>
+
+<li><a href="surfaceexcessadsorption.html">Factors Affecting Adsorption Calculations</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org036b753" class="outline-4">
+<h4 id="org036b753"><span class="section-number-4">1.1.5</span> <a href="factorsaffectingshalesorption.html">Factors Affecting Sorption in Shales</a></h4>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgccb24f0" class="outline-2">
+<h2 id="orgccb24f0"><span class="section-number-2">2</span> Diffusion</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>gas production from shales involves 3 steps <a class='org-ref-reference' href="#Crosdale1998">Crosdale1998</a>:
+<ul class="org-ul">
+<li>Darcy flow in natural and hydraulic fractures,</li>
+<li>Knudsen diffusion in nano-pores, and</li>
+<li>Gas desorption in nano-pores.</li>
+</ul></li>
+<li>the rate determining step is diffusion in nano-pores <a class='org-ref-reference' href="#Crosdale1998">Crosdale1998</a></li>
+<li>diffusion in shales is a complex process; consequently most models attempting to characterise this phenomenon are approximate <a class='org-ref-reference' href="#Ruckenstein1971">Ruckenstein1971</a></li>
+
+<li>in laboratory experiments, the adsorption process involves <a class='org-ref-reference' href="#Qiu2009">Qiu2009</a>
+<ul class="org-ul">
+<li>film diffusion - in the fluid film</li>
+<li>intra-particle diffusion - along pore walls</li>
+<li>mass-action - ad/desorption on the active sites in pores</li>
+</ul></li>
+<li>mass-action is instantaneous for physisorption; one of the other two steps is usually rate determining <a class='org-ref-reference' href="#Qiu2009">Qiu2009</a></li>
+
+<li>models used to fit experimental kinetic data often fail to consider if the boundary conditions assumed by the model are valid to the given experimental conditions <a class='org-ref-reference' href="#Qiu2009">Qiu2009</a></li>
+</ul>
+</div>
+
+<div id="outline-container-orgd0ba247" class="outline-4">
+<h4 id="orgd0ba247"><span class="section-number-4">2.0.1</span> <a href="ratelaw.html">Rate Law Based Equations</a></h4>
+</div>
+
+<div id="outline-container-org5c7d49d" class="outline-3">
+<h3 id="org5c7d49d"><span class="section-number-3">2.1</span> <a href="fickslaws.html">Fick's Laws</a></h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org7687b3d" class="outline-4">
+<h4 id="org7687b3d"><span class="section-number-4">2.1.1</span> <a href="filmdiffusion.html">Film Diffusion Models</a></h4>
+</div>
+
+<div id="outline-container-org1f5fb7d" class="outline-4">
+<h4 id="org1f5fb7d"><span class="section-number-4">2.1.2</span> <a href="surfacediffusion.html">Surface Diffusion Models</a></h4>
+</div>
+</div>
+
+<div id="outline-container-orgf0f8553" class="outline-3">
+<h3 id="orgf0f8553"><span class="section-number-3">2.2</span> Experiment / Calculations</h3>
+</div>
+</div>
+
+<div id="outline-container-org6ee806b" class="outline-2">
+<h2 id="org6ee806b"><span class="section-number-2">3</span> Pore/Surface Characterization</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li><a href="poretypes.html">Pore Types</a></li>
+<li><a href="porosity.html">Porosity</a></li>
+<li><a href="specificsurfacearea.html">Specific Surface Area</a></li>
+<li><a href="poresizedistribution.html">Pore Size Distribution</a></li>
+<li><a href="fractaldimension.html">Fractal Dimension</a></li>
+<li><a href="permeability.html">Permeability</a></li>
+<li><a href="contactangle.html">Contact Angle</a></li>
+<li><a href="surfaceenergy.html">Surface Energy</a></li>
+</ul>
+</div>
+
+<div id="outline-container-orgf80f84b" class="outline-3">
+<h3 id="orgf80f84b"><span class="section-number-3">3.1</span> Pore/Surface Characterization Methods</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+It must be noted that no experimental methods exist that can give the absolute value of pore characteristics listed above; measured values are characteristic of the experimetal conditions <a class='org-ref-reference' href="#Sing1985">Sing1985</a>
+</p>
+
+
+<div id="orgdcbf1cd" class="figure">
+<p><img src="./Nelson200901.jpg" alt="Nelson200901.jpg" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Pore Size Distribution from Nelson 2009</p>
+</div>
+
+<ul class="org-ul">
+<li><a href="adsorptionporecharacterization.html">Gas Adsorption</a></li>
+<li><a href="interfacialporecharacterization.html">Interfacial Forces</a></li>
+<li><a href="porosimetry.html">Mercury Porosimetry</a></li>
+<li><a href="calorimetry.html">Calorimetry</a></li>
+<li><a href="pycnometry.html">Pycnometry</a></li>
+<li><a href="stereology.html">Stereology</a></li>
+<li><a href="amotttest.html">Amott Test</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org46fa2f3" class="outline-2">
+<h2 id="org46fa2f3"><span class="section-number-2">4</span> Geology</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Shales are the largest sedimentary strata on the Earth's curst <a class='org-ref-reference' href="#Garrels1969">Garrels1969</a></li>
+<li>CO2 production in coals can be due to interactions between coal water and an igneous rock, although significant amounts of CO2 related to non-igneous activity maybe present <a class='org-ref-reference' href="#Crosdale1998">Crosdale1998</a></li>
+
+<li><a href="geochemistry.html">Shale Geochemistry</a></li>
+<li><a href="bowlandbasin.html">Bowland Basin</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4a345d5" class="outline-2">
+<h2 id="org4a345d5"><span class="section-number-2">5</span> Enhanced Recovery</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>Gas injection may increase methane recovery from shale reservoirs by one of the two mechanisms <a class='org-ref-reference' href="#Clarkson2000">Clarkson2000</a>: 
+<ol class="org-ol">
+<li>lowering methane partial pressure in free gas</li>
+<li>competitive adsorption</li>
+</ol></li>
+
+<li><a href="carbondioxideenhancedrecovery.html">Carbon dioxide Enhanced Recovery</a></li>
+<li><a href="surfactantenhancedrecovery.html">Surfactant Enhanced Recovery</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org477cce0" class="outline-2">
+<h2 id="org477cce0"><span class="section-number-2">6</span> Papers</h2>
+<div class="outline-text-2" id="text-6">
+<ol class="org-ol">
+<li><a href="lothianshaleadsorption.html">A Review of Manometric Adsorption Measurement Methods and Associated Errors for Gas Shales</a></li>
+<li><a href="adsorptioninbowlandshales.html">Effect of Shale Composition and Pore Structure on Shale Gas Adsorption</a></li>
+<li><a href="methanewatermulticomponentadsorption.html">Methane-Water Multi-Component Adsorption Measurement in Gas Shales</a></li>
+<li><a href="methanewatercarbondioxidemulticomponentadsorption.html">Methane-Water-Carbondioxde Multi-Component Adsorption Measurement in Gas Shales</a></li>
+<li><a href="methanewatersurfactantmulticomponentadsorption.html">Methane-Water-Surfactant Multi-Component Adsorption Measurement in Gas Shales</a></li>
+<li><a href="reservoirmodellingwithadsorption.html">Effect of Gas Desorption on Shale Gas Extraction</a></li>
+<li><a href="adsorptionpythonandlabview.html">Manometric Adsorption Data Acquisition and Analysis with LabVIEW and Python</a></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org08c3852" class="outline-2">
+<h2 id="org08c3852"><span class="section-number-2">7</span> Bibliography</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+<h1 class='org-ref-bib-h1'>Bibliography</h1>
+<ul class='org-ref-bib'><li><a id="Crosdale1998">[Crosdale1998]</a> <a name="Crosdale1998"></a>Crosdale, Beamish & Valix, Coalbed methane sorption related to coal composition, <i>International Journal of Coal Geology</i>, <b>35(1)</b>, 147-158 (1998).</li>
+<li><a id="Ruckenstein1971">[Ruckenstein1971]</a> <a name="Ruckenstein1971"></a>Ruckenstein, Vaidyanathan & Youngquist, Sorption by solids with bidisperse pore structures, <i>Chemical Engineering Science</i>, <b>26(9)</b>, 1305-1318 (1971).</li>
+<li><a id="Qiu2009">[Qiu2009]</a> <a name="Qiu2009"></a>Qiu, Lv, Pan, Zhang, Zhang & Zhang, Critical review in adsorption kinetic models, <i>Journal of Zhejiang University-SCIENCE A</i>, <b>10(5)</b>, 716-724 (2009). <a href="https://doi.org/10.1631/jzus.A0820524">link</a>. <a href="http://dx.doi.org/10.1631/jzus.A0820524">doi</a>.</li>
+<li><a id="Sing1985">[Sing1985]</a> <a name="Sing1985"></a>Sing, Reporting physisorption data for gas/solid systems with special reference to the determination of surface area and porosity (Recommendations 1984), <i>Pure and applied chemistry</i>, <b>57(4)</b>, 603-619 (1985).</li>
+<li><a id="Garrels1969">[Garrels1969]</a> <a name="Garrels1969"></a>Garrels & Mackenzie, Sedimentary rock types: relative proportions as a function of geological time, <i>Science</i>, <b>163(3867)</b>, 570-571 (1969).</li>
+<li><a id="Clarkson2000">[Clarkson2000]</a> <a name="Clarkson2000"></a>Clarkson & Bustin, Binary gas adsorption/desorption isotherms: effect of moisture and coal composition upon carbon dioxide selectivity over methane, <i>International Journal of Coal Geology</i>, <b>42(4)</b>, 241-271 (2000).</li>
+</ul>
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2018-06-28 Thu 18:35</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+* Micropore Filling
+
+- for pores with radii less than 15 A, adsorption follows micro-pore filling rather than surface coverage cite:Bering1966
+- in pores greater than 15 A, adsorption initially starts as surface coverage mechanism, but later turns into pore filling by capillary condensation mechanism once a threshold relative pressure is reached cite:Bering1966
+- adsorption in micropores is a limiting case of the capillary condensation theory cite:Bering1966

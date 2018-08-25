@@ -1,0 +1,17 @@
+#+TITLE: Elovich Rate Equation
+
+* Elovich's Diffusion Equation
+
+- used for chemisorption in heterogeneous solids cite:Qiu2009
+- $\frac{dq}{dt} = a * e ^(-\alpha q)$ cite:Qiu2009 
+  - q is amount adsorbed at time t
+  - a is desorption constant
+  - \alpha is initial adsorption rate
+- linear form of the equation is given as cite:Qiu2009
+- $q = (\frac{2.3}{\alpha}) * log (t + t_0) - (\frac{2.3}{\alpha}) log t_0$
+  - $t_0 = \frac{1}{\alpha a}$
+- with the assumption of $a\alpha >> 1$ and boundary conditions
+  - $q=0$ at $t=0$
+  - $q=q$ at $t=t$
+- $q = \alpha ln(a \alpha) + \alpha ln t$
+- the Elovich equation was found to correlate data better than the Activated Adsorption Theory cite:Jahediesfanjani2007

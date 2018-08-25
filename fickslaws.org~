@@ -1,0 +1,19 @@
+#+TITLE: Fick's Laws
+
+* Fick's Laws
+  
+- Fick's First Law:
+  - defines mass flux with respect to distance
+  - first law for cartesian co-ordinates
+  - $$J = - A * D * \frac{\partial C}{\partial z}$$
+  - J is flux per unit area
+  - A is area accross which diffusion occurs
+  - C is concentration
+  - z is distance
+  - D is diffusion coefficient
+- Fick's Second Law: 
+  - a more general conservation equation that gives change in concentration with time
+  - $$\frac{\partial C}{\partial t} = D * \frac{\partial^2 C}{\partial r^2} = D (\frac{\partial ^2 C}{\partial z ^2} + \frac{1}{A} + \frac{\partial A}{\partial z} \frac{\partial C}{\partial z})$$
+  - t is time
+- For a non-linear isotherm cite:Clarkson1999
+  - $$\frac{\partial}{\partial z} (D {\frac{\partial C}{\partial z}}) = \frac{\partial C}{\partial t}$$

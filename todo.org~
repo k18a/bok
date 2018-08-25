@@ -1,0 +1,112 @@
+* PhD Data Analysis                                                :computer:
+** DOING [#D] python adsorption calculations [21%]
+- [ ] cell volume calibration
+- [ ] void volume calibration
+- [ ] automate mole calculation based on given function
+- [X] calculate injected moles
+- [X] calculate leak rate
+  - [X] make leak rate file
+  - [X] split apply combine based on eos and specific volume
+  - [X] fit with poiseuilles eqn
+- [X] calculate adsorption
+  - [X] calculate leaked moles
+  - [X] calculate moles present
+  - [X] calculate adsorbed moles
+- [-] calculate isotherms
+  - [X] first order
+  - [ ] second order
+  - [ ] elovich
+  - [ ] film diffusion - linear driving force
+  - [ ] film diffusion - mass transfer equation
+  - [ ] intraparticle diffusion - weber morris
+  - [ ] intraparticle diffusion - homogeneous solid diffusion model
+- [ ] fit isotherms
+  - [ ] langmuir
+  - [ ] dubinin
+  - [ ] bet
+- [ ] write files
+- [ ] saturation pressure
+- [ ] t plot
+- [ ] alpha s plot
+- [ ] BJH psd
+- [ ] DFT psd
+Notes: 
+classes / functions
+- sample data - function/dictionary
+- adsorbate data - function/dictionary
+- manometric calculations - class
+  - get pressure data from csv file
+  - calibrate reference cell volume
+- isotherm calculations - class
+** DOING analyse data [0%]
+ - [-] L100
+   - [X] 40
+   - [ ] 60
+   - [ ] 80
+ - [ ] A153
+   - [ ] 60
+   - [ ] 45
+   - [ ] 30
+ - [ ] AA83A
+   - [ ] 60
+   - [ ] 45
+   - [ ] 30
+ - [ ] AA94
+   - [ ] 60
+   - [ ] 45
+   - [ ] 30
+ - [ ] AA114
+   - [ ] 60
+   - [ ] 45
+   - [ ] 30
+ - [ ] AT1
+   - [ ] 60
+   - [ ] 45
+   - [ ] 30
+ - [ ] B53
+   - [ ] 60
+   - [ ] 45
+   - [ ] 30
+* PhD Experiment                                                        :lab:
+** DOING do experiments [28%]
+ - [X] L100
+   - [X] 40
+   - [X] 60
+   - [X] 80
+ - [X] A153
+   - [X] 60
+   - [X] 45
+   - [X] 30
+ - [ ] AA83A
+   - [ ] 60
+   - [ ] 45
+   - [ ] 30
+ - [ ] AA94
+   - [ ] 60
+   - [ ] 45
+   - [ ] 30
+ - [ ] AA114
+   - [ ] 60
+   - [ ] 45
+   - [ ] 30
+ - [ ] AT1
+   - [ ] 60
+   - [ ] 45
+   - [ ] 30
+ - [ ] B53
+   - [ ] 60
+   - [ ] 45
+   - [ ] 30
+** WAITING-ON density calculation - water immersion
+** NEXT order relative humidity meter                                  :@lab:
+* CFA                                                              :computer:
+** EXPAND-SCOPE transfer notes to emacs
+* Processes                                                        :computer:
+** WAITING-ON copy quotes from todo.txts
+** NEXT automatically create bookmark when moving between links
+* IChemE                                                           :computer:
+** NEXT [#C] send minutes                                                   
+** NEXT [#B] Contact viridor 
+** NEXT [#B] contact dimitri for Tornnes visit 
+** WAITING-ON fundraising letters
+* Self Care                                                            :home:

@@ -1,0 +1,36 @@
+#+TITLE: Freundlich Isotherm
+
+- initially proposed as an empirical approach to model adsorption, can also be derived theoretically based on an adsorption potential approach. 
+- does not have proper Henry's law behavior, or a finite limit when pressure is high. 
+- can only be applied to a narrow pressure range.
+- isotherm
+  - $C_ \mu = K * P ^ (1/n)$
+    - parameter n is usually greater than 1
+- linear form of equation:
+  - $log(C_ {\mu}) = log(K) + \frac{1}{n} log(P)$
+  - yields a straight 
+
+[[./freundlich.png]]
+
+* Theoretical Derivation
+
+Assumptions:
+
+1. Heterogeneous surface
+2. Adsorption energy is distributed
+3. Surface topography is patchwise 
+4. Sites having the same adsorption energy are grouped together in one patch 
+5. Each patch is independent from the others - no interaction between patches
+6. Langmuir isotherm is applicable to each patch
+7. Energy distribution of all patches follows exponential decay function: $F(E) = a.exp(-E/E_0)$, where a and E0 are constants with the product of aE0 being the total number of sites.
+
+* Temperature Dependence
+Using an adsorption potential approach: 
+
+Adsorption potential is given as:
+
+$A=R*T*ln(\frac{P}{P_0})$
+
+Temperature dependence of K: 
+
+$K=K_0*exp(-\frac{\alpha R T}{A_0})$

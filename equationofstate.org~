@@ -1,0 +1,7 @@
+#+TITLE: Equations of State
+
+* Equations of State in Shale Adsorption
+
+- the choice of equation of state, greatly affects calculated adsorption values
+  - whilst conventional equations such as Peng-Robinson and Redlich-Kwong are widely used, more precise EoS specific for individual gases have been proposed in the recent years.
+- it is challenging to find an EoS that adequately describes adsorption at near critical regions cite:Siemons2007

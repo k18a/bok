@@ -1,0 +1,8 @@
+* Capillary Condensation
+
+- based on Kelvin equation cite:Sing1985
+- $r_K=\frac{2*\sigma^{lg}*V_m^l}{R*T*ln(p/p_0)}$
+  - where $r_K$ is the Kelvin radius
+  - $\sigma^{lg}$ is the surface tension
+  - $V_m^l$ is the liquid molar volume
+- commonly used in 

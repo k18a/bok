@@ -1,0 +1,139 @@
+#+TITLE: Python 
+
+* PEP8 Style Guide
+
+- Python Enhancement Proposal #8
+** whitespace
+- syntactically significant
+- use spaces instead of tabs for indentation
+- lines should be 79 characters in length or less
+- continuations of long expressions should be indented by 4 extra spaces
+- functions and classes should be separated by two blank lines
+- methods should be separated by one blank line
+- don't put spaces around list indexes, function calls, or keyword argument assignments
+- put one - and only one - space before and after variable assignemtns
+** naming conventions
+- functions, variables, and attributes should be in lowercase_underscore format
+- protected instance of attributes should be in _leading_underscore format
+- private instance of attributes should be in __double leading_underscore format
+- classes and exceptions should be in CapitalizedWord format
+- module-level constants should be in ALL_CAPS format
+- instance methods in classes should use self as the name of the first parameter (which refers to the object)
+- class methods should use cls as the name of the first parameter (which refers to the class)
+** expressions and statements
+- *there should be one - and preferable only one - obvious way to do it*
+- use inline negation (if a is not b) instead of negation of positive expressions (if not a is b)
+- don't check for empty values by checking the length of the object; use if not somelist and assume empty values implicitly to evaluate false
+- avoid single-line statements and loops
+- always put import statements at the top of a file
+- always use absolute names for modules when importing them - not names relative the the current module's own path
+- imports should be in sections of the following order
+  - standard library modules
+  - third party modules
+  - your own modules
+  - each sub-section should have imports in an alphabetical order
+
+* Python 2 vs Python 3
+
+| Python 2                                        | Python 3                                   |
+| no bytes                                        | bytes contain seqeunces fo 8 bit values    |
+| str contains sequence of 8-bit values           | str contains sequece of unicode characters |
+| unicode contains sequence of unicode characters | no unicode                                 |
+  
+* Environments
+* Loops
+  
+** generator functions
+
+- range(x) - creates list of x integers from 0 to x-1
+- xrange(x) - creates an iteratable from 0 to x-1, thereby saving memory compared to range
+- enumerate(list) - loop over something and also have a counter (index value)
+
+* Functions 
+
+#+BEGIN_SRC python
+def name_of_function(positional_arguments,*args,** kwargs):
+    '''
+    DOCSTRING: explains function
+    INPUT: name
+    OUTPUT: name
+    '''
+    print(positional_arguments)
+    return positional_arguments + 1
+#+END_SRC
+
+** *args 
+- can pass in as many arguments as you want
+- python converts all inputs into a tuple
+- can use any name for the variable preceeded by a \*, but by convention always use \*args and not a different variable name
+** **kwargs
+- builds a dictionary of keyword arguments
+- can use any variable name preceeded by \**, but always use **kwargs by convention
+
+** map(function, list)
+- applies function to list and produces result
+
+** filter(function, list)
+- filters list based on function
+
+** lambda x: operations on x
+- takes x as an input and returns result performing operations on x
+- very useful when used with map or filter
+
+* Classes
+
+#+BEGIN_SRC python
+class NameOfClass():
+    class_object_attributes = values #attributes that are common to all instances of the class
+
+#create instance of the object
+    def __init__(self,param1,param2):
+	self.param1 = param1
+	self.param2 = param2
+	self.param3 = NameOfClass.class_object_attribute
+
+    def some_methods(self):
+	#perform actions
+	print(self.param1)
+#+END_SRC
+     
+** Special Methods
+
+- names begin and end with two underscores
+- also known as magic methods
+- defined but not usually called directly by name
+
+*** init
+
+**** self
+     - refers to the class
+     - you can use any name to refer to the class, the first keyword is taken as the self argument, but always use self as per convention
+
+*** repr
+- goal is to be unambiguous
+- it is convenient to be able to output the value of an instance of an object by using a print statement
+- when we do this, we would like the value to be represented in the output in some understandable unambiguous format.
+- the \__repr__ special method can be used to arrange for this to happen. 
+- if we define this method, it can get called automatically when we print the value of an instance of a class for which we defined this method
+
+*** str
+- goal is to be readable
+
+#+BEGIN_SRC python
+class Point3D(object):
+    def __init__(self,a,b,c):
+        self.x = a
+        self.y = b
+        self.z = c
+    def __repr__(self):
+        return "Point3D(%d, %d, %d)" % (self.x, self.y, self.z)
+    def __str__(self):
+        return "(%d, %d, %d)" % (self.x, self.y, self.z)
+my_point = Point3D(1, 2, 3)
+print `my_point` # __repr__ gets called automatically
+print my_point # __str__ gets called automatically
+#+END_SRC
+
+* Dictionary
+** dict.update
+- dict.update(dict2) adds dict2 to dict
