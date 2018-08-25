@@ -1,5 +1,7 @@
 #+TITLE: Self Care
 
+* Mindfulness
+
 * Skin Care
 
 ** [[file:alphabetahydroxyacids.org][Alpha and Beta Hydroxy Acids]]
@@ -8,3 +10,5 @@
 * Facial Exercises 
 
 ** [[file:facialwarmup.org][Facial Warm-up Exercises]]
+
+* Yoga
