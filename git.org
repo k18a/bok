@@ -49,3 +49,5 @@
   - git clone
 
 * Branch
+- to branch into new branch
+  - git checkout -b
