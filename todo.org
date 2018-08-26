@@ -1,7 +1,0 @@
-#+TITLE: To Do
-* CFA
-** EXPAND-SCOPE transfer notes to emacs
-* Processes
-* IChemE
-* Self Care
-* Quotes
