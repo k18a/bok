@@ -8,4 +8,9 @@
 *.html
 
 # ignore bibliography
-# /bibliography
+/bibliography
+
+# ignore todo files
+reading.org
+video.org
+todo.org
