@@ -6,3 +6,6 @@
 
 #ignore html files
 *.html
+
+# ignore bibliography
+# /bibliography
