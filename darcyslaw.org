@@ -1,0 +1,10 @@
+#+TITLE: Darcy's Law
+
+#+BEGIN_EXPORT latex
+Q = -\frac{k}{\mu} (\nabla P - \rho g)
+#+END_EXPORT
+- Darcy velocity, Q, is the volume per unit time flowing through the cross section
+- actual velocity, v, is given as
+#+BEGIN_EXPORT latex
+v = \frac{Q}{\phi} = -\frac{k}{\mu} (\nabla P - \rho g)
+#+END_EXPORT
