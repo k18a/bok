@@ -25,7 +25,7 @@
 - volume phase is pore volume times the saturation
   - $V_l = S_l * V_P = S_l \phi h_{net} \Delta x \Delta y$
 - this estimate from a bottom-up approach can be validated based on volumetrics calculated from other sources such as a material balance study or a computer mapping package
-* Material Balance
+* [[file:materialbalance.org][Material Balance]]
 - provide an independent method of estimating the volume of oil, water, and gas in a reservoir for comparison with volumetric estimates
 - magnitues of various factors in a material balance equation indicates the relative contribution of different drive mechanisms at work in the reservoir
 - can be used to predict future reservoir performance and aid in estimating cumulative recovery efficiency

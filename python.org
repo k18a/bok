@@ -79,9 +79,15 @@ def name_of_function(positional_arguments,*args,** kwargs):
 ** lambda x: operations on x
 - takes x as an input and returns result performing operations on x
 - very useful when used with map or filter
+  
+** return 
+- returns value of function
+
+** assert
+- asserts if a function passes a certain condition 
 
 * Classes
-
+- everything in python is an object - lists, dictionaries, etc. - and have associated methods with them
 #+BEGIN_SRC python
 class NameOfClass():
     class_object_attributes = values #attributes that are common to all instances of the class
@@ -102,20 +108,16 @@ class NameOfClass():
 - names begin and end with two underscores
 - also known as magic methods
 - defined but not usually called directly by name
-
 *** init
-
 **** self
      - refers to the class
      - you can use any name to refer to the class, the first keyword is taken as the self argument, but always use self as per convention
-
 *** repr
 - goal is to be unambiguous
 - it is convenient to be able to output the value of an instance of an object by using a print statement
 - when we do this, we would like the value to be represented in the output in some understandable unambiguous format.
 - the \__repr__ special method can be used to arrange for this to happen. 
 - if we define this method, it can get called automatically when we print the value of an instance of a class for which we defined this method
-
 *** str
 - goal is to be readable
 
@@ -134,6 +136,15 @@ print `my_point` # __repr__ gets called automatically
 print my_point # __str__ gets called automatically
 #+END_SRC
 
-* Dictionary
-** dict.update
-- dict.update(dict2) adds dict2 to dict
+* Data Types
+** Dictionary
+**** dict.update
+  - dict.update(dict2) adds dict2 to dict
+ 
+* Jupyter 
+** nbconvert
+- converts jupyter notebook to specified output format
+#+BEGIN_SRC shell
+jupyter nbconvert --to outputformat inputfile --output outputfile
+#+END_SRC
+

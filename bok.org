@@ -18,8 +18,6 @@
 
 ** [[file:surfacescience.org][Surface Sciences]]
 
-** [[file:reservoirengineering.org][Reservoir Engineering]]
-
 ** [[file:chemicals.org][Chemicals]]
 
 ** [[file:constants.org][Constants]]
@@ -44,7 +42,13 @@
    
 ** [[file:python.org][Python]] 
 
+** [[file:numpy.org][Numpy]]
+
+** [[file:scipy.org][Scipy]]
+
 ** [[file:pandas.org][Pandas]]
+
+** [[file:matplotlib.org][Matplotlib]]
 
 ** [[file:git.org][Git]]
 
