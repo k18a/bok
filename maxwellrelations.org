@@ -1,1 +1,1 @@
-* Maxwell Relations
+#+TITLE: Maxwell Equations

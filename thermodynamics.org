@@ -40,6 +40,7 @@
 - [[file:heatcapacity.org][Heat Capacity]]
 - [[file:thermalexpansioncoefficient.org][Thermal Expansion Coefficient]]
 - [[file:isothermalcompressibility.org][Isothermal Compressibility]]
+- [[file:vanthoffequation.org][van't Hoff Equation]]
 
 * Single Component Thermodynamics
 
@@ -51,10 +52,10 @@
 - [[file:vapourpressure.org][Vapour Pressure]]
 - [[file:isostericheat.org][Isosteric Heat]]
 
-** [[file:equationofstate.org][Equations of State]]
+** Equations of State
 
-- [[file:vanderwaals.org][van der Waals]]
-- [[file:pengrobinson.org][Peng Robinson]]
+- [[file:idealrealgas.org][Ideal gas law]]
+- [[file:cubicequationofstate.org][Cubic Equation of State]]
 
 * Multi Component Thermodynamics
 

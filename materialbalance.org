@@ -1,152 +1,170 @@
 #+TITLE: Material Balance
 
+- usually derived from [[file:reynoldstranporttheorem.org][Reynolds Transport Theorem]]
+  
+* From Reynolds Transport Theorem
+
+
 * [[file:materialtimederivative.org][Material form of Mass Conservation Equation]]
+- an alternative method to deriving mass conservation compared to Reynolds Transport Theorem
 ** Time Derivative Form
 - consider a control volume, whose shape and volume can change over time, but is of fixed mass and material
+- a particle located at X in the reference configuration is now located at x in current configuration 
+
+      reference t = 0                   current t = t
+      +--------------+   mapping         -------------
+      |              |  $x=\chi(X,t)$ --/             \--
+      |         X----+-----------------------x           \
+      |              |              (                     )
+      |              |               \                   /
+      +--------------+                --\             /--
+                                         -------------
+
 - reference configuration is at time t=0
-- \omega_0 represents all particles in the control volume at time t=0
+- $\omega_0$ represents all particles in the control volume at time t=0
 - the control volume changes over time
-- \Chi represents a mapping function that maps the position of a particle x from time 0 to current time t
+- $\Chi$ represents a mapping function that maps the position of a particle x from time 0 to current time t
 - since x(t=0) is represented by X (see [[file:materialtimederivative.org][Material Time Derivative]]), \Chi maps co-ordinates from Lagrangian to Eulerian co-ordinates
-- \Chi is a function of X and t
-#+BEGIN_EXPORT latex
-x=\Chi(X,t)
-#+END_EXPORT
+- $\Chi$ is a function of X and t
+\begin{equation}
+x = \chi (X,t)
+\end{equation}
 - based on our definition, the mass of the particles in the reference configuration equals mass of particles in current configuration
-#+BEGIN_EXPORT latex
+\begin{equation}
 m(\omega_0) = m(\omega)
-#+END_EXPORT
+\end{equation}
 - m represents mass of particles
 - in differential form
-#+BEGIN_EXPORT latex
+\begin{equation}
 dm(X) = dm(x)
-#+END_EXPORT
+\end{equation}
 - X represents position vector in Lagrangian coordinates, and x represents position vector in Eulerian co-ordinates
 - dm is differntial mass
 - mass is volume times density
-#+BEGIN_EXPORT latex
+\begin{equation}
 \rho_0(X) \phi(X) dV_0 = \rho(x,t) \phi(x,t) dV 
-#+END_EXPORT
-- \rho is density
-- \phi is rock porosity
+\end{equation}
+- $\rho$ is density
+- $\phi$ is rock porosity
 - dV is differential volume
 - integrating this 
-#+BEGIN_EXPORT latex
+\begin{equation}
 \int \int \int _{\omega_0} \rho_0(X) \phi_0(X) dX_1 dX_2 dX_3= \int \int \int _{\omega} \rho(x,t) \phi(x,t) dx_1 dx_2 dx_3
-#+END_EXPORT
-- we can use a Jacobian determinant to take Eulerian co-ordinates to Lagrangian co-ordinates
-#+BEGIN_EXPORT latex
+\end{equation}
+- we can use a Jacobian determinant to convert Eulerian co-ordinates to Lagrangian co-ordinates
+\begin{equation}
 \int \int \int _{\omega_0} \rho_0(X) \phi(X) dX_1 dX_2 dX_3= \int \int \int _{\omega} \rho(x,t) \phi(x,t) J dX_1 dX_2 dX_3
-#+END_EXPORT
+\end{equation}
 - J is the Jacobian determinant which converts from x to X, given as J = det(F)
-#+BEGIN_EXPORT latex
+\begin{equation}
 J = 
-\[
-\begin{matrix}
+\begin{bmatrix}
  \frac{\partial x_1}{\partial X_1} & \frac{\partial x_1}{\partial X_2} & \frac{\partial x_1}{\partial X_3} \\
  \frac{\partial x_2}{\partial X_1} & \frac{\partial x_2}{\partial X_2} & \frac{\partial x_2}{\partial X_3} \\
  \frac{\partial x_3}{\partial X_1} & \frac{\partial x_3}{\partial X_2} & \frac{\partial x_3}{\partial X_3} \\
-\end{matrix}
-\]
-#+END_EXPORT
+\end{bmatrix}
+\end{equation}
 - representing 
-#+BEGIN_EXPORT latex
+\begin{equation}
 F_{ij} = \frac{\partial x_i}{\partial X_j}
-#+END_EXPORT
+\end{equation}
 - the Jacobian is given as 
-#+BEGIN_EXPORT latex
+\begin{equation}
 J = 
-\[
-\begin{matrix}
+\begin{bmatrix}
  F_{11} & F_{12} & F_{13} \\
  F_{21} & F_{22} & F_{23} \\
  F_{31} & F_{32} & F_{33} \\
-\end{matrix}
-\]
-#+END_EXPORT
+\end{bmatrix}
+\end{equation}
 - in simplified notation
-#+BEGIN_EXPORT latex
+\begin{equation}
 \int _{\omega_0} \rho_0(X) \phi_0(X) dV_0 = \int _{\omega} \rho(x,t) \phi(x,t) J dV_0
-#+END_EXPORT
+\end{equation}
 - the statement of mass conservation is thus given as
-#+BEGIN_EXPORT latex
+\begin{equation}
 \rho_0(X) \phi_0(X) = \rho(x,t) \phi(x,t) J
-#+END_EXPORT
-- this is equivalent to other forms of [[file:materialbalance.org][material balance]]
+\end{equation}
+- this is equivalent to other forms of material balance
+- this form is often known as the material form of conservation of mass
 ** Regular Form
 - to get to a more familiar form, we need to take the material time derivative on both sides of the equation
-#+BEGIN_EXPORT latex
+\begin{equation}
 \frac{D}{Dt} (\rho _0 \phi _0) = \frac{D}{Dt} (\rho \phi J)
-#+END_EXPORT
+\end{equation}
 - left hand side is constant
-#+BEGIN_EXPORT latex
+\begin{equation}
 0 = \frac{D}{Dt} (\rho \phi J)
 = J \frac{D}{Dt} (\rho \phi) + \rho \phi \frac{D}{Dt} J 
 = J [\frac{\partial (\rho \phi)}{\partial t} + \nabla (\rho \phi) * v] + \rho \phi \frac{D}{Dt} J
-#+END_EXPORT
+\end{equation}
 - let's figure out the second term for now
 - applying chain rule, since F is a function of time
-#+BEGIN_EXPORT latex
+\begin{equation}
 \frac{D}{Dt} J = \frac{D}{Dt} (det F)
 = \frac{\partial det F}{\partial F_{ij}} \frac{\partial F_{ij}}{\partial t}
-#+END_EXPORT
+\end{equation}
 - partial of the determinant of a matrix with respect to its components is equal to the determinant of the matrix times the transpose inverse of the matrix
-#+BEGIN_EXPORT latex
+\begin{equation}
 \frac{\partial det F}{\partial F_{ij}} \frac{\partial F_{ij}}{\partial t} 
 = 
 det F (F_{ji}) ^{-1} \frac{\partial F_{ij}}{\partial t} 
-#+END_EXPORT
+\end{equation}
 - since det F = J; inverse transpose is just the elemenets reversed in the first term
 - also since x in F is a function of X and t in the second term
-#+BEGIN_EXPORT latex
+\begin{equation}
 J \frac{\partial X _i}{\partial x _j} \frac{\partial }{\partial t} \frac{\partial x_i}{\partial X_j} 
-#+END_EXPORT
+\end{equation}
 - rearranging differntial terms
-#+BEGIN_EXPORT latex
+\begin{equation}
 J \frac{\partial X _i}{\partial x _j} \frac{\partial }{\partial X_j} \frac{\partial x_i}{\partial t} 
-#+END_EXPORT
+\end{equation}
 - the last term is nothing but the velocity
-#+BEGIN_EXPORT latex
+\begin{equation}
 J \frac{\partial X _i}{\partial x _j} \frac{\partial V_i}{\partial X_j} 
-#+END_EXPORT
+\end{equation}
 - rearranging
-#+BEGIN_EXPORT latex
+\begin{equation}
 J \frac{\partial V _i}{\partial x _j} \frac{\partial X_i}{\partial X_j} 
-#+END_EXPORT
+\end{equation}
 - the last term is the identity matrix
-#+BEGIN_EXPORT latex
+\begin{equation}
 J \frac{\partial V _i}{\partial x _j} \delta_{ij} 
-#+END_EXPORT
+\end{equation}
 - the identity matrix is represented by the Kronecker delta function, also known as the identity matrix
-#+BEGIN_EXPORT latex
+\begin{equation}
 \delta _{ij} = 1 if i=j
 \delta _{ij} = 0 otherwise
-#+END_EXPORT
+\end{equation}
 - multiplication of any matrix with an identity matrix is itself
-#+BEGIN_EXPORT latex
+\begin{equation}
 J \frac{\partial V _i}{\partial x _j}
-#+END_EXPORT
+\end{equation}
 - in slightly different notation
-#+BEGIN_EXPORT latex
+\begin{equation}
 J \nabla v
-#+END_EXPORT
+\end{equation}
 - going back to our initial material balance
-#+BEGIN_EXPORT latex
+\begin{equation}
 0 = J [\frac{\partial (\rho \phi)}{\partial t} + \nabla (\rho \phi) * v] + \rho \phi J \nabla v
-#+END_EXPORT
+\end{equation}
 - simplifying
-#+BEGIN_EXPORT latex
+\begin{equation}
 0 = \frac{\partial (\rho \phi)}{\partial t} + \nabla (\rho \phi) * v + \rho \phi \nabla v
-#+END_EXPORT
+\end{equation}
 - the last 2 terms represent the product rule
 - the 3 dimensional mass conservation equation is given as
-#+BEGIN_EXPORT latex
+\begin{equation}
 0 = \frac{\partial (\rho \phi)}{\partial t} + \nabla (\rho \phi v)
-#+END_EXPORT
+\end{equation}
 - expanding the divergence operator \nabla
-#+BEGIN_EXPORT latex
+\begin{equation}
 0 = \frac{\partial (\rho \phi)}{\partial t} + 
 \frac{\partial (\rho \phi v_x)}{\partial x} +
 \frac{\partial (\rho \phi v_y)}{\partial y} +
 \frac{\partial (\rho \phi v_z)}{\partial z}
-#+END_EXPORT
+\end{equation}
+- for non porous media
+\begin{equation}
+0 = \frac{\partial (\rho)}{\partial t} + \nabla (\rho v)
+\end{equation}

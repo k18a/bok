@@ -18,7 +18,7 @@
 - example: a reaction mediated by a catalyst present in small amounts
 - consider a closed container initially filled with chemical species A
 - $a A \rightarrow b B$
-- $c_A = -kt + c_i$
+- $$c_A = -kt + c_i$
 - where c_i is initial concentration
 - at $t=0$, $[A] = [A]_0$
 - $c_A = [A]_0 - kt$
@@ -46,7 +46,7 @@
 
 - earliest model pertaining to adsorption rate based on adsorption capacity
 - called pseudo first order equation to distinguish it from kinetic equations
-- initially proposed by Lagergren in 1898
+- initially proposed by cite:Lagergren1898
 - $\frac{dq_t}{dt} = k_1 * (q_e - q_t)$
   - q_t is amount adsorbed at time t
   - k_2 is pseudo second order rate constant
@@ -54,11 +54,11 @@
 - with boundary conditions:
   - $q_t = 0$ at $t = 0$
   - $q_t = q_t$ at $t = t$
+- $ln(\frac{q_e}{q_e - q_t}) = k_1 t$
 - with boundary conditions
   - $q_t = q_0$ at $t = 0$
   - $q_t = q_t$ at $t = t$
 - $q_t = q_e - q_e exp(-k_1 t) + q_0 exp(-k_1 t)$
-- $ln(\frac{q_e}{q_e - q_t}) = k_1 t$
 - linear form 
 - $log(q_e - q_t) = log(q_e) - \frac{k_1}{2.303} * t$
 - k_1 can be calculated from a linear plot of $log(q_e - q_t)$ agains t
@@ -97,17 +97,38 @@
   - q_t is amount adsorbed at time t
   - k_2 is pseudo second order rate constant
   - q_e is amount adsorbed at equilibrium
-- integrating with boundary conditions
-  - $q_t = q_0$ at $t = 0$
-  - $q_t = q_t$ at $t = t$
-- $q_t = \frac{k _2 t q _e ^2 - k _2 q _0 t q_e + q _0}{k _2 q _e t - k _2 q _0 t + 1}$
-  - q_t is amount adsorbed at time t
-  - k_2 is pseudo second order rate constant
-  - q_e is amount adsorbed at equilibrium
-  - q_0 is amount adsorbed at time 0
 - defining $V_0 = k_2 q_e ^2$
   - V_0 is the initial adsorption rate
 - linear form
 - $\frac{t}{q_t} = \frac{1}{V_0} + \frac{1}{q_e} * t$
 - k_2 can be found by plotting $\frac{t}{q_t}$ agains t
 - k_2 is inversely proportional to the rate of adsorption
+- integrating with boundary conditions
+  - $q_t = q_0$ at $t = 0$
+  - $q_t = q_t$ at $t = t$
+\begin{equation}
+q_t = \frac{q_e k_2 t |q_e - q_0| + q_0}{1 + k_2 t |q_e - q_0|}
+\end{equation}
+  - q_t is amount adsorbed at time t
+  - k_2 is pseudo second order rate constant
+  - q_e is amount adsorbed at equilibrium
+  - q_0 is amount adsorbed at time 0
+
+* Elovich's Diffusion Equation
+- used for chemisorption in heterogeneous solids cite:Qiu2009
+- $\frac{dq}{dt} = a * e ^{-\alpha q}$ cite:Qiu2009 
+  - q is amount adsorbed at time t
+  - a is desorption constant
+  - \alpha is initial adsorption rate
+- linear form of the equation is given as cite:Qiu2009
+- $q = (\frac{2.3}{\alpha}) * log (t + t_0) - (\frac{2.3}{\alpha}) log t_0$
+  - $t_0 = \frac{1}{\alpha a}$
+- with the assumption of $a\alpha >> 1$ and boundary conditions
+  - $q=0$ at $t=0$
+  - $q=q$ at $t=t$
+- $q = \alpha ln(a \alpha) + \alpha ln t$
+- with the boundary conditions
+  - $q=q_0$ at $t=0$
+  - $q=q$ at $t=t$
+- $q = \frac{-log( exp(-\alpha q_0) - a \alpha t )}{\alpha}$
+- the Elovich equation was found to correlate data better than the Activated Adsorption Theory cite:Jahediesfanjani2007

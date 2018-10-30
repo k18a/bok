@@ -4,6 +4,7 @@
 - the pressure is replaced by a two-dimensional equivalent, the spreading pressure cite:Do1998
 - Spreading pressure is the reduction in surface tension of a surface due to spreading of the adsorbate on the surface cite:Ruthven1984
 
+#+ATTR_ORG: : width 300
 [[./gibbsapproachadsorption.png]]
 
 - the Helmholtz free energy of the free gas ($\alpha$), adsorbent ($\beta$), and the adsorbate ($\sigma$) phases are given as
@@ -11,7 +12,7 @@
   - $dF = -S^{\beta}dT^{\beta} -P^{\beta}dV^{\beta} +\sum_{i=1}^{N}\mu_i^{\beta}dn_i^{\beta}$
   - $dF = -S^{\sigma}dT^{\sigma} -\pi^{\sigma}dA^{\sigma} +\sum_{i=1}^{N}\mu_i^{\sigma}dn_i^{\sigma}$
 - integrating with constant T, P, and $\mu$, we get:
-  - $F^{\alpha}=-PV^{\alpha}+\sum_{i=1}^{N}{\mu}_i^{\alpha}n_i^{\alpha}$o
+  - $F^{\alpha}=-PV^{\alpha}+\sum_{i=1}^{N}{\mu}_i^{\alpha}n_i^{\alpha}$
   - $F^{\beta}=-PV^{\beta}+\sum_{i=1}^{N}{\mu}_i^{\beta}n_i^{\beta}$
   - $F^{\sigma}=-{\pi A}^{\sigma}+\sum_{i=1}^{N}{\mu}_i^{\sigma}n_i^{\sigma}$
 - differentiating and subtracting from the thermodynamic relation for Helmholtz free energy we get the Gibbs Duhem equation for all three phases:

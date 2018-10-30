@@ -1,6 +1,61 @@
 #+TITLE: Surface Excess Adsorption
 
-* Definitions
+* Adsorption Characterization
+- analysis methodology, adopted after cite:rouquerol1994, is outlined below
+[[./adsorption_workflow.jpg]]
+- samples were loaded on to the adsorption rig, and the rig was flushed with Helium several times to remove any residual gas from previous experiments
+- samples were then outgassed in-situ at 90 degC and 150 Torr pressure
+- after outgassing the rig was brought down to experimental temperature and allowed to reach equilibrium at about 500 Torr pressure
+- performing outgassing in-situ in an inert near-vacuum atmosphere allows us to minimize any exposure to air, moisture, or any other adsorptive that might otherwise affect our measurements
+- adsoprtion and desorption was measured through a step-wise procedure as outlined in the diagram
+- the reference and sample cells are isolated; adsorptive is injected into the reference cell and allowed to reach thermal equilibrium; the sample valve is then opened and the rig pressure was monitored for 2 hours or until equilibrium conditions were met, whichever was longer
+- initial # moles in the sample cell is using an appropriate Equation of State
+\begin{equation}
+n_{is} = EOS(P_{s},V_{v},T_{s})
+\end{equation}
+- where
+  - $n_{is}$ is number of moles initially present in the sample cell before experiment
+  - EOS is a function denoting the chosen Equation of State
+  - $P_s$ is sample cell pressure
+  - $V_v$ is sample cell void volume
+  - $T_s$ is sample cell temperature
+- sample cell void volume is calculated as
+\begin{equation}
+V_v = V_s - V_{sp} * w_{sh}
+\end{equation}
+- where
+  - $V_v$ is sample cell void volume
+  - $V_s$ is sample cell volume
+  - $V_{sp}$ is sample specific volume
+  - $w_{sh}$ is sample weight
+- injected # moles is calculated as
+\begin{equation}
+n_{ir} = EOS(P_{r,f},V_r,T_r) - EOS(P_{r,i},V_r,T_r)
+\end{equation}
+- where
+  - $n_{ir}$ is number of moles injected
+  - EOS is a function denoting the chosen Equation of State
+  - $P_{r,f}$ is final pressure of reference cell
+  - $P_{r,i}$ is initial pressure of reference cell
+  - $V_r$ is reference cell volume
+  - $T_r$ is reference cell temperature
+- # moles present at any given instance is calculated as
+\begin{equation}
+n_{c} = EOS(P_s,V_r,V_v,T_s)
+\end{equation}
+  - $n_{c}$ is number of moles injected
+  - EOS is a function denoting the chosen Equation of State
+  - $P_{s}$ is final pressure of reference cell
+  - $P_{s}$ is initial pressure of reference cell
+  - $V_r$ is reference cell volume
+  - $V_v$ is sample cell volume
+  - $T_s$ is sample cell temperature
+- excess adsobed # moles for the nth pressure step is calculated as 
+\begin{equation}
+n_{ex} = n_{ir}(1) + n_{ir}(2) + \dots + n_{ir}(n) + n_{is} - n_c
+\end{equation}
+- where
+  - $n_{ir}(n)$ is amount of moles injected at nth pressure step
 
 * Gibbs Dividing Surface
 - the Gibbs Dividing Surface (GDS) is an arbirtary geometrical surface close to the adsorbing surface, with a precisely determined position
@@ -83,7 +138,6 @@ cite:Rouquerol2016
 - second term in the equation for absolute adsorption corrects the assumption of 0 adsorption volume in the Gibbs approach
   - for sub-critical adsorption below 1 bar this term might be ignored
   - but this term becomes significant for adsorption above 10 bars and for super-critical adsorption
-
 ** Void Volume Correction Term
 - $c ^g ( V _i ^S - V _{GDS} )$
 - thrid term accounts for the fact that GDS does not coincide with the adsorbing surface accessible to the adsorbate
@@ -96,13 +150,47 @@ cite:Rouquerol2016
   - whilst conventional equations such as Peng-Robinson and Redlich-Kwong are widely used, more precise EoS specific for individual gases have been proposed in the recent years.
 - it is challenging to find an EoS that adequately describes adsorption at near critical regions cite:Siemons2007
 
+* Leak Rates
+- despite significant efforts it is not uncommon to experience a very small leak in home-made manometric adsorption measurement rigs
+- long-durations required to reach equilibrium, coupled with small adsorption capacities for shales, imply that even small leak rates can have a significant effect on the calculated amount adsorbed
+- leak rates for gases are modeled as a flow through an orrifice using the Hagan-Poiseuille law assuming a laminar flow
+\begin{equation}
+Q = \frac{\pi R^4 (P_1 ^2 - P_2 ^2)}{16 \eta l P_2}
+\end{equation}
+- Q is the volumetric flow of the outlet side pressure (atmospheric pressure)
+- P_1 is the rig pressure
+- P_2 is atmospheric pressure
+- R is radius of opening
+- l is length of opening
+- \eta is the viscosity of the fluid
+- leak rates for non-compressible fluid such as water, oil, etc. is modelled using the following equation
+\begin{equation}
+Q = \frac{\pi R^4 (P_1 - P_2)}{8 \eta l}
+\end{equation}
+
 * Saturation Vapour Pressure
-- saturation Vapour Pressure has been obtained through 
+- saturation Vapour Pressure has been obtained through
+  - Antoine equation
+\begin{equation}
+ln P_0 = \beta _1 - \frac{\beta _2}{T}
+\end{equation}
   - a plot of log(vapour pressure) vs 1/T cite:Clarkson1997
   - from Chemical Engineering data books cite:Lide2003
   - from reduced Kirchoff equation cite:Kapoor1989
     - $P _s = P _c * exp[ \frac{T _{nbp}}{T _c} (\frac{ln P _c}{1 - T _{nbp}/T _c})(1 - \frac{T _c}{T}) ]$
+  - from Dubinin equation cite:Kapoor1989, cite:Amankwah1995
+    - $P_s = (\frac{T}{T_c})^2 P_c$
+  - from modified Dubinin equation cite:Amankwah1995
+    - $P_s = (\frac{T}{T_c})^k P_c$
 - cite:Clarkson1997 found that pseudo vapour pressures obtained from CRC handbook and Kirchoff equation provided the best results.
+
+* Adsorbed Phase Density
+- several assumptions have been made in the literature
+  - adsorbed phase density equals liquid density at boiling poing
+    - for methane at -162 degC: 422.6 kg/m3 (2218 mol/m3)
+  - adsorbed phase density is higher than liquid density
+
+- data for liquid-like behavior of the adsorbed phase was first provided by Gurvitch 1915 for meso-porous substances exhibiting capillary condensation cite:Do1998. However Dubinin found that density of sorbed phase in micro-porous substances microporous substances might be higher by a factor of 1.5. cite:Do1998. However in the absence of further information, it is reasonable to assume that sorbed phase behaves like a liquid in micro-porous substances.
 
 * Gravimetric Adsorption
 - in gravimetric measurements, the effect of weight increase due to adsorption is reduced due to bouyancy, proportional to gas density $\rho _i ^g$ cite:Rouquerol2016

@@ -22,3 +22,10 @@
   - $\frac{dy}{dt} = f'\left( t \right) = re^{rt}$
 - $y = f\left( t \right) = \ln\left( {rt} \right)$
   - $\frac{dy}{dt} = f'\left( t \right) = \frac{1}{t}$
+
+* Integrals
+- there are two types of integrals
+  1. definite
+     - limits are specified
+  2. indefinite
+     - also known as primitive integral or as antiderivative

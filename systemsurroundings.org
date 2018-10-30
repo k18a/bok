@@ -16,3 +16,12 @@
 - in thermodynamics - no mass, heat, or momentum transfer
 
 * Surroundings
+
+
+* Control Volume
+
+- fixed region in space
+
+** Control Surface
+
+- surface surrounding the control volume

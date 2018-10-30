@@ -8,6 +8,8 @@
 
 ** [[file:alphabetahydroxyacids.org][Alpha and Beta Hydroxy Acids]]
 *** [[file:glycolicacid.org][Glycolic Acid]]
+** Skin
+- [[file:fitzpatrickscale.org][Fitzpatrick scale]]
 
 * Facial Exercises 
 

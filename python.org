@@ -103,44 +103,16 @@ class NameOfClass():
 	print(self.param1)
 #+END_SRC
      
-** Special Methods
+** [[file:pythonspecialmethods.org][Special Methods]]
 
-- names begin and end with two underscores
-- also known as magic methods
-- defined but not usually called directly by name
-*** init
-**** self
-     - refers to the class
-     - you can use any name to refer to the class, the first keyword is taken as the self argument, but always use self as per convention
-*** repr
-- goal is to be unambiguous
-- it is convenient to be able to output the value of an instance of an object by using a print statement
-- when we do this, we would like the value to be represented in the output in some understandable unambiguous format.
-- the \__repr__ special method can be used to arrange for this to happen. 
-- if we define this method, it can get called automatically when we print the value of an instance of a class for which we defined this method
-*** str
-- goal is to be readable
-
-#+BEGIN_SRC python
-class Point3D(object):
-    def __init__(self,a,b,c):
-        self.x = a
-        self.y = b
-        self.z = c
-    def __repr__(self):
-        return "Point3D(%d, %d, %d)" % (self.x, self.y, self.z)
-    def __str__(self):
-        return "(%d, %d, %d)" % (self.x, self.y, self.z)
-my_point = Point3D(1, 2, 3)
-print `my_point` # __repr__ gets called automatically
-print my_point # __str__ gets called automatically
-#+END_SRC
-
+** [[file:pythonclassproperties.org][Properties]]
 * Data Types
 ** Dictionary
 **** dict.update
   - dict.update(dict2) adds dict2 to dict
  
+* Other Features
+- [[file:pythondecorators.org][Decorators]]
 * Jupyter 
 ** nbconvert
 - converts jupyter notebook to specified output format
@@ -148,3 +120,61 @@ print my_point # __str__ gets called automatically
 jupyter nbconvert --to outputformat inputfile --output outputfile
 #+END_SRC
 
+* Error Handling
+- 3 keywords in case error arises in code
+  - try
+  - except
+  - finally
+#+BEGIN_SRC python
+try:
+code_to_try
+except ErrorType1:
+code_in_case_of_error_type_1
+except ErrorType2:
+code_in_case_of_error_type_2
+except:
+code_in_case_of_all_other_errors
+else:
+code_in_case_of_no_error
+finally:
+code_executed_all_the_time
+#+END_SRC
+
+* Pylint
+- create report for code
+#+BEGIN_SRC shell
+pylint python_file.py
+#+END_SRC
+
+* Unittest
+- allws you to test your programme for input files to check if you're getting correct results
+#+BEGIN_SRC python
+import unittest
+import programme
+
+class TestClass(unittest.TestCase):
+
+    def test_method_1(self):
+        input_1 = input_1
+        result = programme(input_1)
+        self.assertEqual(result,correct_result)
+#+END_SRC
+
+* Decorators
+- add extra functionality to old functions
+#+BEGIN_SRC python
+@some_decorator
+def func():
+    return something
+#+END_SRC
+* String Fromatting
+** .format
+#+BEGIN_SRC python
+template.format(p0,p1,...,k0=v0,k1=v1,...)
+#+END_SRC
+- p0, p1, p2 are positional arguments
+- k0, k1 are keyword arguments with values v0, v1
+#+BEGIN_SRC python 
+'{Placeholder1:Totalwidth.DecimaldigitsNumberformatting}'.format(Placeholder1=value_to_be_formatted)
+#+END_SRC
+- value_to_be_formatted is formattd according to format specifications

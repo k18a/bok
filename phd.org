@@ -1,129 +1,12 @@
 #+TITLE: Adsorption and Migration Mechanisms in Gas Shales at Pore Scale
-* To Do
-** Literature Review
-*** Concepts
- - [ ] diffusion based models reservoir engineering book
- - [ ] learn to do reservoir simulation coal bed methane
-*** Papers
-** Data Analysis
-*** DOING analyse data [0%]
-    CLOSED: [2018-08-19 Sun 21:23]
-  - [-] L100
-    - [X] 40
-    - [ ] 60
-    - [ ] 80
-  - [ ] A153
-    - [ ] 60
-    - [ ] 45
-    - [ ] 30
-  - [ ] AA83A
-    - [ ] 60
-    - [ ] 45
-    - [ ] 30
-  - [ ] AA94
-    - [ ] 60
-    - [ ] 45
-    - [ ] 30
-  - [ ] AA114
-    - [ ] 60
-    - [ ] 45
-    - [ ] 30
-  - [ ] AT1
-    - [ ] 60
-    - [ ] 45
-    - [ ] 30
-  - [ ] B53
-    - [ ] 60
-    - [ ] 45
-    - [ ] 30
-*** NEXT [#D] python adsorption calculations [100%]
-    CLOSED: [2018-08-19 Sun 20:55]
- - [ ] cell volume calibration
- - [ ] void volume calibration
- - [ ] automate mole calculation based on given function
- - [X] calculate injected moles
- - [X] calculate leak rate
-   - [X] make leak rate file
-   - [X] split apply combine based on eos and specific volume
-   - [X] fit with poiseuilles eqn
- - [X] calculate adsorption
-   - [X] calculate leaked moles
-   - [X] calculate moles present
-   - [X] calculate adsorbed moles
- - [-] calculate isotherms
-   - [X] first order
-   - [ ] second order
-   - [ ] elovich
-   - [ ] film diffusion - linear driving force
-   - [ ] film diffusion - mass transfer equation
-   - [ ] intraparticle diffusion - weber morris
-   - [ ] intraparticle diffusion - homogeneous solid diffusion model
-   - [ ] ficks law
-   - [ ] unipore model
-   - [ ] bidisperse model
- - [ ] fit isotherms
-   - [ ] 
-   - [ ] langmuir
-   - [ ] dubinin
-   - [ ] bet
- - [ ] write files
- - [ ] saturation pressure
- - [ ] t plot
- - [ ] alpha s plot
- - [ ] BJH psd
- - [ ] DFT psd
- Notes: 
- classes / functions
- - sample data - function/dictionary
- - adsorbate data - function/dictionary
- - manometric calculations - class
-   - get pressure data from csv file
-   - calibrate reference cell volume
- - isotherm calculations - class
+* Reports
+1. [[file:rigstandardoperatingprocedure.org][Standard Operating Procedure]]
+2. [[file:reservoirmodeldevelopment.org][Shale Reservoir Model]]
+3. [[file:~/bok/lothianshaleadsorption.org][Error Analysis]]
+4. [[file:bowlandpore.org][Pore Characteristics]]
+5. [[file:adsorptioninbowlandshales.org][Methane Adsorption]]
 
-** Experiment 
-*** DOING do experiments [57%]
-  - [X] L100
-    - [X] 40
-    - [X] 60
-    - [X] 80
-  - [X] A153
-    - [X] 60
-    - [X] 45
-    - [X] 30
-  - [X] AA114
-    - [X] 60
-    - [X] 45
-    - [X] 30
-  - [X] AA83A
-    - [X] 60
-    - [X] 45
-    - [X] 30
-  - [ ] AT1
-    - [ ] 60
-    - [ ] 45
-    - [ ] 30
-  - [ ] AA94
-    - [ ] 60
-    - [ ] 45
-    - [ ] 30
-  - [ ] B53
-    - [ ] 60
-    - [ ] 45
-    - [ ] 30
-*** WAITING-ON density calculation - water immersion
-*** NEXT order relative humidity meter
-
-* Papers
-1. [[file:rigstandardoperatingprocedure.org][Standard Operating Procedure for Manometric Rig]]
-2. [[file:~/bok/lothianshaleadsorption.org][A Review of Manometric Adsorption Measurement Methods and Associated Errors for Gas Shales]]
-3. [[file:adsorptioninbowlandshales.org][Effect of Reservoir Temperature, Pressure, Geo-chemistry, and Pore-Geometry on Gas Shale Adsorption Characteristics and Reservoir Producibility]]
-4. [[file:methanewatermulticomponentadsorption.org][Methane-Water Multi-Component Adsorption Measurement in Gas Shales]]
-5. [[file:methanewatercarbondioxidemulticomponentadsorption.org][Methane-Water-Carbondioxde Multi-Component Adsorption Measurement in Gas Shales]]
-6. [[file:methanewatersurfactantmulticomponentadsorption.org][Methane-Water-Surfactant Multi-Component Adsorption Measurement in Gas Shales]]
-7. [[file:reservoirmodellingwithadsorption.org][Effect of Gas Desorption on Shale Gas Extraction]]
-8. [[file:adsorptionpythonandlabview.org][Manometric Adsorption Data Acquisition and Analysis with LabVIEW and Python]]
-* Adsorption 
+* [[file:adsorption.org][Adsorption]]
 ** Theory 
 - it's best to use the simplest model that suits a given purpose, both to undue emphasis on the fine points of theory often tends to obscure what's really going on.
 *** Single-Component Models
@@ -187,10 +70,6 @@
 - [[file:surfaceenergy.org][Surface Energy]]
 ** Pore/Surface Characterization Methods
 It must be noted that no experimental methods exist that can give the absolute value of pore characteristics listed above; measured values are characteristic of the experimetal conditions cite:Sing1985
-#+NAME: Nelson Pore Throat Sizes
-#+CAPTION: Pore Size Distribution from Nelson 2009
-#+ATTR_ORG: :width 10
-[[./Nelson200901.jpg]]
 - [[file:adsorptionporecharacterization.org][Gas Adsorption]]
 - [[file:interfacialporecharacterization.org][Interfacial Forces]]
 - [[file:porosimetry.org][Mercury Porosimetry]]

@@ -1,19 +1,16 @@
 * Enthalpy
 
 - capacity to do non-mechanical work plus the capacity to release heat
-
-** Derivation
-
-
-$dH = \partial Q + VdP$
-
-
+\begin{equation}
+H = U + PV
+\end{equation}
+\begin{equation}
+dH = \partial Q + VdP
+\end{equation}
+- an extensive property
 *** Special Cases
-
 For an ideal gas
-
 $H(S,P,N) = c_p N k (\frac{P \phi}{k} e^{S/Nk})^{1/c_p}$
-
 - H is enthalpy
 - S is entropy
 - cp is heat capacity at constant pressure
