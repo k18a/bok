@@ -51,3 +51,7 @@
 * Branch
 - to branch into new branch
   - git checkout -b
+#+BEGIN_SRC ipython
+from numpy import numpy
+
+#+END_SRC

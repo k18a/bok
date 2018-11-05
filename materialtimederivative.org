@@ -1,5 +1,4 @@
 #+TITLE: Material Time Derivative
-
 - describes the time rate of change of some physical quantity of a material element that is subjected to space and time dependent macroscopic velocity field variations of that physical quantity
 - serves as a link between Eulerian and Lagrangian descriptions of continum deformation
 - also known as total derivative, substantial derivative, or convective derivative
