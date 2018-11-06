@@ -12,12 +12,16 @@ F_x =
 D_{11} \frac{\partial C}{\partial x} +
 D_{12} \frac{\partial C}{\partial y} +
 D_{13} \frac{\partial C}{\partial z} +
+\end{equation}
 
+\begin{equation}
 F_y = 
 D_{21} \frac{\partial C}{\partial x} +
 D_{22} \frac{\partial C}{\partial y} +
 D_{23} \frac{\partial C}{\partial z} +
+\end{equation}
 
+\begin{equation}
 F_z = 
 D_{31} \frac{\partial C}{\partial x} +
 D_{32} \frac{\partial C}{\partial y} +
